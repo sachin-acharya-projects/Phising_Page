@@ -1,0 +1,76 @@
+@font-face {font-family: 'BravAda-Arma-Regular';src:url('/fonts/BravAda-Arma-Regular.ttf.woff') format('woff'),url('/fonts/BravAda-Arma-Regular.ttf.svg#BravAda-Arma-Regular') format('svg'),url('/fonts/BravAda-Arma-Regular.ttf.eot'),url('/fonts/BravAda-Arma-Regular.ttf.eot?#iefix') format('embedded-opentype'); font-weight: normal;font-style: normal;}
+$bravAda: 'BravAda-Arma-Regular';
+$allan: 'Allan', cursive;// Itallic Long
+$anton: 'Anton', sans-serif;
+$courgette: 'Courgette', cursive;
+$kallam: 'Kalam', cursive;
+$kaushan: 'Kaushan Script', cursive;
+$lobster: 'Lobster', cursive;
+$lobserTwo: 'Lobster Two', cursive;
+$ostwald: 'Oswald', sans-serif;
+$Pathway: 'Pathway Gothic One', sans-serif;
+$playball: 'Playball', cursive;
+$righteous: 'Righteous', cursive;
+$roboto: 'Roboto', sans-serif;
+$squada: 'Squada One', cursive;
+$teko: 'Teko', sans-serif;
+$tradeWinds: 'Trade Winds', cursive;
+$yanone: 'Yanone Kaffeesatz', sans-serif;
+$yellow: 'Yellowtail', cursive;
+//Basic Formating
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+}
+
+content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 250px;
+
+    span{
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background: #fff;
+        margin: 10px 0px;
+        border-radius: 6px;
+        box-shadow: 0 0 20px rgb(226, 226, 226),
+                    0 0 50px rgb(226, 226, 226);
+
+        a{
+            color: black;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            font-family: sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            transition: 0.3s all linear;
+
+            img{
+                height: 40px;
+                width: 40px;
+                margin-right: 5px;
+            }
+
+            &:nth-of-type(1):hover{
+                color: rgb(0, 140, 255);
+            }
+        }
+    }
+}
