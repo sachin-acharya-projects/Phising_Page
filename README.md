@@ -13,7 +13,7 @@ Once you hit enter and it shows something like
 ````
 Listening at https://localhost:3000
 ````
-then you are good to go. Visit the given side i.e. https://localhost:3000. Once you Sign Up in this website your credentials will be messaged to given Email Address
+then you are good to go. Visit the given side i.e. http://localhost:3000. Once you Sign Up in this website your credentials will be messaged to given Email Address
 If you wanna use this template for phising in Remote network,  then you must PORT forward you router or Use NGROK has a Tunnel Host.
 visit https://ngrok.com/ for NGROK
 
