@@ -9,8 +9,8 @@ const process = require('process')
 
 const app = express();
 
-const useremail = process.env.useremail;
-const userpass = process.env.userpass;
+const useremail = process.env.useremail; // or Assign this variable with your Email Address e.g. somename@domain.com
+const userpass = process.env.userpass; // This to yor Password for above gmail or ****************
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
