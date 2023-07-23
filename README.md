@@ -3,7 +3,7 @@ This is a small website for `Phishing Attacks` for Facebook using `ExpressJS`
 
 ## Disclamier
 _____
-This project is only for educational purpose and any misuses of this repository should have no ties with me.
+This project is only for educational purposes and any misuse of this repository should have no ties with me.
 
 ## Installation
 ### Installation
@@ -15,7 +15,7 @@ npm install
 The above command installs all the packages required which are mentioned in the package.json file
 
 ### Configure
-Open [constants\index.js](constants/index.js), update the value of variables `EMAIL` and `PASSWORD` with your credentials. You can also set the ENVIRONMEN VARIABLEs with NAME `USER_EMAIL` and `USER_PASSWORD`
+Open [constants\index.js](constants/index.js), and update the value of variables `EMAIL` and `PASSWORD` with your credentials. You can also set the ENVIRONMENT VARIABLEs with names `USER_EMAIL` and `USER_PASSWORD`
 
 ### Execute
 ````
